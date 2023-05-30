@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/icon-title.png">
+    <link rel="stylesheet" href="./assets/font-icon/fontawesome-free-6.1.2-web/css/all.css">
+    <title>Khóa học IELTS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --height-header: 80px;
+        }
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 82.5px;
+            background-color: #fff;
+            z-index: 9999;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #nav {
+            display: inline-block;
+        }
+
+        #nav > li {
+            display: inline-block;
+        }
+
+        #nav li {
+            position: relative;
+        }
+
+        #nav > li > a {
+            color: #000;
+            /* text-transform: uppercase; */
+            font-weight: 550;
+            font-size: 18px;
+        }
+
+        #nav li a {
+            display: block;
+            text-decoration: none;
+            line-height: var(--height-header);
+            padding: 0px 20px;
+        }
+
+        #nav li:hover .subnav {
+            display: block;
+        }
+
+        #nav .subnav {
+            display: none;
+            background-color: #fff;
+            min-width: 300px;
+            position: absolute;
+            top: 103%;
+            left: 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        #nav, .subnav {
+            list-style-type: none;
+        }
+
+        #nav .subnav li {
+            border-bottom: 1px solid #ccc;
+        }
+
+        #nav .subnav a {
+            color: #000;
+            line-height: 40px;
+            padding: 0 16px;
+        }
+
+        #header-img {
+            height: var(--height-header);
+            width: 250px;
+            object-fit: contain;
+        }
+
+        #nav li:hover > a {
+            color: #d72229;
+        }
+
+        #nav > li:hover {
+            border-bottom: 3px solid #d72229;
+        }
+
+        #nav .subnav li:hover {
+            background-color: rgba(220,220,220,0.5);
+        }
+
+        #nav .subnav li:hover > a {
+            padding: 0 22px;
+        }
+
+        header .seach-btn > .fa-solid {
+            font-size: 24px;
+            line-height: var(--height-header);
+            color: #d72229;
+        }
+
+        header .seach-btn {
+            float: right;
+        }
+
+        header .seach-btn:hover {  
+            cursor: pointer;
+        }
+
+        #seach-input {
+            display: none;
+            font-size: 15px;
+            text-align: center;
+            border-style: none;
+            padding: 0 5px;
+        }
+
+        /*dca*/
+        .dca{
+            margin-top: 50px;
+            background-image: linear-gradient(0deg, #dd262c, #d4696d);
+            color: #fff;
+            display:flex;
+            height: 520px;
+        }
+        .dca1{
+            padding-top: 30px;
+            padding-left: 20px;
+        }
+        .dc_pro{
+            border: 1px solid #fff;
+            margin-top: 30px;
+            height:40px;
+            width:250px; 
+            margin-left: -40px;
+            background-color: #fff;
+            color:#000; 
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .ct_dc_pro{
+            padding-top: 20px;
+            font-size: 17px;
+            line-height: 30px;
+            padding-left: 20px;
+        }
+        /*loi ic*/
+        .loi_ich{
+            padding-top:40px ;
+            background-color: #fff;
+            margin-bottom: 50px;
+        }
+        .l_ich{
+            padding-top: 30px; 
+            line-height: 35px; 
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .loi_ich_1{
+            padding-left: 50px; 
+            padding-top: 50px;
+            display:flex;
+        }
+        .l_i1{
+            line-height:30px ;
+            text-align: center;
+            font-size: 15px;
+            padding-top: 10px;
+        }
+        .boxb1{
+            margin-left: 20px;
+            border: 2px solid #d9d9d9;
+            width: 320px;
+        }
+        .imgB1{
+            height: 170px;
+            width: 230px;
+            padding-top: 20px; 
+            padding-left: 80px; 
+        }
+        .boxb1:hover{
+            background-image: linear-gradient(180deg, #da2228, #d4696d);
+            /*background-color: #f33339;*/
+            color: #fff;
+        }
+        .tieude{
+            text-align: center;
+            text-transform: uppercase;
+            color:#1976BD; 
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+        /*phuong phap dao ta */
+        .pp{
+            background-color: #edecec;
+            height:580px;
+        }
+        .icon{
+            width:50px;
+            height:50px;
+        }
+        .pp_h{
+            margin-top: 50px;
+            display:flex;
+        }
+        .div1{
+            padding-top: 30px;
+            display:flex;
+            padding-left: 50px;
+            width: 650px;
+            border-radius: 20px;border: 1px 1px  solid #d9d9d9;
+            background-color:#F6F6F6;
+            margin-left: 80px;
+        }
+        .kn{
+            color:#d72229;
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            padding-top: 8px;
+            line-height: 30px;
+        }
+        .cnt{
+            padding-left: 20px;
+        }
+        .img_a{
+            width: 600px;
+            height: 420px; 
+            padding-top: 20px;
+        }
+        /*noi dung*/
+        .tieude1{
+            text-transform: uppercase;
+            color:#d72229; 
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 20px;
+
+        }
+        .thong_tin_chung{
+            padding-top: 50px;
+            display:flex;
+        }
+        .noidung{
+            padding-top: 50px;
+        }
+        .lo_trinh{
+            padding-left: 120px;
+            width: 700px;
+        }
+        .lt1{
+            color: #fff;
+            background-color: #d72229;
+            border: 2px solid #d72229;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        .lt2{
+            color: #fff;
+            background-color: #1976BD;
+            border: 2px solid #1976BD;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        .chitiet_lt1{
+            padding-top: 20px;
+            padding-left: 20px;
+            border: 3px dashed #d72229;
+            border-style:none dashed dashed dashed;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .chitiet_lt2{
+            padding-top: 20px;
+            padding-left: 20px;
+            border: 3px dashed #1976BD;
+            border-style:none dashed dashed dashed;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .infor{
+            color: #fff;
+            background-color: #1976BD;
+            border: 2px solid #d72229;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        /*ket qua*/
+        .kq{
+            margin-top: 50px;
+            padding-top: 20px;
+            background-color:#edecec;
+            height: 520px;
+        }
+        .chitiet_kq{
+            padding-top: 60px;
+            display:flex;
+            padding-left: 100px;
+        }
+        .kq1{
+            background-color: #d72229;
+            border: 3px solid #d72229;
+            border-radius: 10px;
+            color:#fff;
+            font-size: 17px;
+            line-height: 30px;
+            height:200px;
+            width: 200px;
+            padding-top: 22px;
+            text-align: center;
+            margin-left: 50px;
+        }
+        .kq2{
+            background-color: #1d3388;
+            border: 3px solid #1d3388;
+            border-radius: 10px;
+            color:#fff;
+            font-size: 17px;
+            line-height: 30px;
+            height:200px;
+            width: 200px;
+            padding-top: 22px;
+            text-align: center;
+            margin-left: 50px;
+            margin-top: 150px;
+        }
+        /*uu dai*/
+        .uu_dai{
+            padding-top: 50px;
+            height: 500px
+        }
+        .ct_uudai{
+            display:flex; 
+            padding-top: 50px; 
+            padding-left: 100px;
+        }
+        .img_b{
+            width: 250px;
+            height: 250px;
+        }
+        .uudai_1{
+            width:700px;
+            height: 150px
+        }
+        .cnt_uudai{
+            font-size: 18px;
+            color:#d72229;
+            line-height: 20px;
+            padding-top: 15px;
+            font-weight: bold;
+        }
+
+        /*footer*/
+        .footer{
+            padding-top: 50px;
+        }
+        .house{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #a1a1a1;
+        }
+        .tel{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #a1a1a1;
+        }
+        .addr{
+            color:#fff;
+            font-size: 20px;
+            line-height: 40px; 
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id = "header-img" src="https://langmaster.edu.vn/templates/ocean/images/logo.png"  alt="Trung tâm tiếng Anh Langmaster - Tiếng Anh giao tiếp cho người mất gốc">
+        <div class="h-menu">
+            <ul id="nav">
+                <!-- Loại bỏ khoảng cách giữa các li -->
+                <li><a href="./index.html" >Trang chủ</a></li>
+                <li>
+                    <a href="./pphoc.html">Phương pháp học</a>
+                    <ul class="subnav">
+                        <li><a href="./pphoc.html#realEnglishid">Tiếng anh thực tế - Real Eglish</a></li>
+                        <li><a href="./pphoc.html#listeningid ">Nghe chép - Listening dictation</a></li>
+                        <li><a href="./pphoc.html#tprid">TPR (Total physical response)</a></li>
+                        <li><a href="./pphoc.html#sicid ">SIC (Situation - Interesting - Center)</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html#giangvienid">Đội ngũ đào tạo</a></li>
+                <li>
+                    <a href="./index.html#khoahocid">Khóa học</a>
+                    <ul class="subnav">
+                        <li><a href="./giaoTiep.html">Tiếng anh giao tiếp </a></li>
+                        <li><a href="./ielst.html">Khóa học Ielts </a></li>
+                        <li><a href="./phatAmPX.html">Phát âm phản xạ </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./lotrinh.html">Lộ trình học</a>
+                    <ul class="subnav">
+                        <li><a href="./lotrinh.html#batDauid">Dành cho người mới bắt đầu</a></li>
+                        <li><a href="./lotrinh.html#diLamid">Dành cho người đi làm</a></li>                        
+                        <li><a href="./lotrinh.html#chuyenSauid">Dành cho người học chuyên sâu</a></li>
+                    </ul>
+                </li>               
+            </ul>
+        </div>
+
+        <div class="seach-btn">
+            <input id="seach-input" type="text" placeholder="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+
+    <img  style="width: 100%; height: 550px;padding-top: 100px;" src="https://langmaster.edu.vn/storage/post-upload/images/hoc-ielts-online%281%29.png">
+    <div style="font-weight: bold; color:#1976BD; font-size: 35px; text-align: center; padding-top: 70px;">KHÓA HỌC IELST TẠI LANGMASTER</div>
+
+    <div class="dca">
+        <div> 
+            <img style="width: 620px; height: 500px"src=" https://sydneygroup.edu.vn/public/upload/ielts-registration-paper-based_0.jpg">
+        </div>
+        <div class="dca1">
+            <p style="font-weight: bold; font-size: 22px;">CHỨNG CHỈ IELST </p>
+            <br>
+            <hr style="color:#fff; width: 100px;">
+            <div class="dc_pro"> LỢI ÍCH MANG LẠI ? </div>
+            <div class="ct_dc_pro" >
+                <ul>
+                    <li>Phát triển toàn diện các kĩ năng trong tiếng Anh và tư duy</li>
+                    <li>Giúp bạn tự tin hơn trong cuộc sống</li>
+                    <li>Giúp dễ săn học bổng, chuẩn bị tốt nhất cho du học </li>
+                    <li>Được ưu tiên xét tuyển đầu vào và xét tuyển đầu ra tại nhiều trường đại học</li>
+                    <li>Được miễn thi tiếng Anh trong kì thi THPT</li>
+                    <li>Hiểu hơn về văn hoá các nước nói tiếng Anh</li>
+                </ul>
+            </div>
+            <div class="dc_pro">DÀNH CHO AI </div>
+            <div  class="ct_dc_pro" >
+                <ul>
+                    <li>Dành cho cả học sinh, sinh viên và người đi làm</li>
+                    <li>Phù hợp nhất với người học từ trình độ B2 trở lên (tương đương IELTS 5.0)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="loi_ich">
+        <h2 class="tieude">Tại sao nên lựa chọn LANGMASTER IELST? </h2>
+        <div class="loi_ich_1">
+            <div  class="boxb1" >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/6.png">
+                <p class="l_ich">GIẢNG VIÊN CHUYÊN NGHIỆP</p>
+                <p class="l_i1">Đội ngũ Giảng viên tại LANGMASTER bắt buộc phải sở hữu chứng chỉ IELTS (tối thiểu 8.0 trở lên) và được đào tạo riêng theo kỹ thuật giảng dạy từ chuyên gia Simon</p>
+            </div>
+            <div  class="boxb1" >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/7.png">
+                <p class="l_ich">TÀI LIỆU ĐỘC QUYỀN</p>
+                <p class="l_i1">Giải pháp luyện thi IELTS tại Pasal được xây dựng gồm các bộ giáo trình Coursebook, Workbook (bao gồm Audio, Video, Flashcard) đa dạng, sát với tất cả dạng bài thi IELTS. </p>
+            </div>
+            <div  class="boxb1"  >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/2020/united_2.png">
+                <p class="l_ich">PHƯƠNG PHÁP ĐỘC QUYỀN</p>
+                <p class="l_i1">9 kỹ thuật học ĐỘC QUYỀN từ Chuyên gia Simon sẽ giúp bạn phát triển toàn diện 4 kỹ năng. Bạn sẽ tránh mắc những lỗi sai phổ biến, và tự tin làm chủ đề thi IELTS</p>
+            </div>
+            <div  class="boxb1" >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/2020/united_4.png">
+                <p class="l_ich"> ĐẶC QUYỀN CHO HỌC VIÊN</p>
+                <p class="l_i1">Học viên được hỗ trợ tư vấn 1-1 trước khi tham gia thi thật. Hơn thế nữa, học viên sẽ nhận được những phần quà tri ân giá trị khi đạt được mục tiêu kỳ vọng của khoá học</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pp">
+        <div>
+            <p class="tieude"> Phương pháp đào tạo khóa học Ielts tại LANGMASTER </p>
+        </div>
+        <div class="pp_h">
+            <div>
+                <div class="div1">
+                    <div>
+                        <img  class="icon" src="https://res.edu.vn/wp-content/uploads/2021/01/1-filled-xxl.png">
+                    </div>
+                    <div class="cnt">
+                        <p class="kn">Hoàn thiện 4 kỹ năng</p>
+                         <p>Tập trung và hoàn thiện các kỹ năng nghe, nói, đọc, viết theo khuôn mẫu thi IELTS</p>
+                    </div>  
+                </div>
+                <div class="div1">
+                    <div >
+                        <img  class="icon" src="https://res.edu.vn/wp-content/uploads/2021/01/2-filled-xxl.png">
+                    </div>
+                    <div class="cnt">
+                        <p class="kn">Nắm vững ngữ pháp & từ vựng</p>
+                         <p>Xây dựng hệ thống vốn từ và ngữ pháp nâng cao của tiếng Anh học thuật</p>
+                    </div>  
+                </div>
+                <div class="div1">
+                    <div>
+                        <img  class="icon" src="https://res.edu.vn/wp-content/uploads/2021/01/3-filled-xxl.png">
+                    </div>
+                    <div class="cnt">
+                        <p class="kn">Sử dụng tiếng Anh nâng cao</p>
+                         <p>Rèn luyện các kỹ năng sử dụng tiếng Anh nâng cao (thuyết trình, viết bài tiểu luận..)</p>
+                    </div>  
+                </div>
+                <div class="div1">
+                    <div >
+                        <img class="icon" src="https://res.edu.vn/wp-content/uploads/2021/01/4-filled-xxl.png">
+                    </div>
+                    <div class="cnt">
+                        <p class="kn">Rèn luyện các kỹ năng sử dụng tiếng Anh nâng cao</p>
+                         <p>Khả năng xử lý tình huống, học về các dạng đề thị IELTS, chiến thuật làm bài.</p>
+                    </div>  
+                </div>
+            </div>
+            <div style="padding-left: 70px">
+                <img class="img_a"src="https://lh3.googleusercontent.com/jH0Cdj06_25ojSOtm_vY0b03IFtuoBDan35xddP0W8UL_56cz520DO_xM_ZdVcLolmA6XcUSLLNcu94hZoprGXiAdi3s99jNgKG4nO7rfdOUF0G_Wp6dsf3fC-Eap9yV6vkoytCa">
+            </div>
+        </div>
+    </div>
+
+    <div class="noidung">
+        <div style="text-align: center;"><b class="tieude1" >NỘI DUNG </b><text class="tieude">CỦA KHÓA HỌC </text></div> 
+        <div class="thong_tin_chung">
+            <div class="lo_trinh">
+                <div class="lt1">
+                    <p> Lộ trình học </p>
+                </div>
+                <div class="chitiet_lt1">
+                    <div style="line-height: 25px;">
+                        <h3> Thời lượng khóa học: </h3>
+                        <ul style="padding-left: 30px;">
+                            <li>Số buổi học: 30 buổi </li>
+                            <li>2 buổi học/tuần x 2 giờ/buổi học</li>
+                        </ul>
+                    </div>
+                    <div style="padding-top: 20px;line-height: 25px;">
+                        <h3>Nội dung khóa học: </h3>
+                        <ul style="padding-left: 30px;" >                       
+                            <li><h4>Ngữ pháp:</h4> Làm chủ 14 chủ điểm ngữ pháp ứng dụng vào các kỹ năng </li>
+                            <li><h4>Từ vựng:</h4> Tăng cường vốn từ vựng với 12 chủ đề thông dụng trong cuộc sống hàng ngày và trong bài thi IELTS</li>
+                            <li><h4>Kỹ năng Đọc:</h4> Nắm vững tất cả các dạng câu hỏi trong bài thi IELTS Reading và cách làm đối với từng dạng
+                            <li><h4>Kỹ năng Nghe:</h4> Nắm vững các bước làm cả 4 section trong đề thi IELTS Listening</li> 
+                            <li><h4>Kỹ năng Nói:</h4> Cải thiện phát âm, ngữ điệu và sự tự tin khi nói, nắm vững cách trả lời và kéo dài câu trả lời cho Speaking 1, sử dụng đúng các thì cho Speaking 2, trả lời được cơ bản các câu hỏi Speaking Part 3</li>
+                            <li><h4>Kỹ năng Viết:</h4> Biết cách viết bài luận, viết được trọn vẹn bài Task 1 & 2 ở mức cơ bản</li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="lo_trinh">
+                <div class="lt2">
+                    <p> THÔNG TIN VỀ LỚP HỌC </p>
+                </div>
+                <div class="chitiet_lt2">
+                    <div style="line-height: 25px;">
+                        <h3>Mô hình tổ chức lớp học: </h3>
+                        <ul style="padding-left: 30px;">
+                            <li>1 Giảng viên - 1 Trợ lý học tập - 1 Chuyên viên chăm sóc</li>
+                            <li>Sĩ số: 18 - 20 học viên</li>
+                        </ul>
+                    </div>
+                    <div style="padding-top: 20px;line-height: 25px;">
+                        <h3>Dịch vụ đặc quyền cho học viên: </h3>
+                        <ul style="padding-left: 30px;" >                       
+                            <li><h4>Hệ thống phương pháp học IELTS: </h4> Độc quyền với 9 kỹ thuật đặc biệt, giúp học viên phát triển toàn diện 4 kỹ năng và nâng cao điểm số</li>
+                            <li><h4>Hệ thống bài tập: </h4>Đa dạng và có chọn lọc, được biên soạn bởi các giảng viên có trình độ chuyên môn cao sở hữu IELTS 8.0+, giúp học viên áp dụng dễ dàng và hiệu quả khi tham gia kỳ thi IELTS</li>
+                            <li><h4>Hệ thống ôn tập: </h4>Mini-test và bài Final Test bám sát với đề thi thực</li>
+                            <li><h4>Hệ thống quản lý học tập trực tuyến: </h4> Giúp học viên tự kiểm soát được tiến độ và lộ trình học của mình; đội ngũ giảng viên hỗ trợ 24/07; đa dạng bài tập thực hành và bài kiểm tra để học viên có thể tự luyện tập tại nhà</li> 
+                            <li><h4>Dịch vụ tư vấn chuyên sâu 1-1:</h4>Hỗ trợ thủ tục đăng ký thi tại IDP; học viên được nhận phần quà giá trị khi đạt được điểm số theo mục tiêu của khoá học</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="kq">    
+        <p class="tieude" >Kết quả đạt được sau khóa học </p>
+        <div class="chitiet_kq">
+            <div class="kq1"> Học viên được trang bị nền tảng kiến thức tiếng Anh vững chắc, và khả năng sử dụng tiếng Anh lưu loát.</div>
+            <div class="kq2"> Học viên có thể tự tin vượt qua bất kỳ cuộc thi tiếng Anh nào một cách dễ dàng , không chỉ riêng về IELTS</div>
+            <div class="kq1"> Giúp học viên phát huy tối đa khả năng để đạt điểm IELTS cao nhất từ 6.5 đến 8.5</div>
+            <div class="kq2">Có thể viết những bài luận văn có độ dài khoảng từ 500 – 1.500 từ theo mọi chủ đề một cách bài bản</div>
+            <div class="kq1">Sử dụng thành thục 4 kỹ năng <b > Nghe, Nói, Đọc, Viết </b> theo chuẩn tiếng Anh học thuật nâng cao</div>
+        </div> 
+    </div>
+
+    <div class="uu_dai">
+        <div>
+            <p class="tieude" >Ưu đãi khi đăng ký khóa học luyện thi Ielts </p>
+            <h3 style="line-height: 30px;text-align: center;padding-top: 20px;">Tất cả các học viên khi đăng ký các khóa học IELTS sẽ được nhận những ưu đãi đặc biệt từ trung tâm. </h3>
+        </div>
+        <div class="ct_uudai">
+            <div class="uudai_1">
+                <img class="img_b" src="https://res.edu.vn/wp-content/uploads/2021/01/sach-ielts.jpg">
+                <p class="cnt_uudai">Sách luyện thi IELTS trực tuyến</p>
+            </div>
+            <div  class="uudai_1" >
+                <img  class="img_b" src="https://res.edu.vn/wp-content/uploads/2021/01/khoa-luyen-thi-truc-tuyen.png">
+                <p class="cnt_uudai" >Bộ đề thi mẫu chính thức</p>
+            </div>
+            <div class="uudai_1">
+                <img  class="img_b" src="https://res.edu.vn/wp-content/uploads/2021/01/khoa-luyen-thi-ielts.png">
+                <p class="cnt_uudai" >Bộ video luyện thi IELTS </p>
+            </div>
+            <div  class="uudai_1">
+                <img class="img_b" src="https://res.edu.vn/wp-content/uploads/2022/02/luyen-thi-ielts-2.jpg">
+                <p class="cnt_uudai" >Luyện thi IELTS thực tế</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-top: 80px;">
+        <footer style="padding-top:20px; padding-left: 70px;display:flex; background:#181717">
+            <div>
+                <img  style=" width: 350px; height: 250px; padding-top: 30px;" src="https://langmaster.edu.vn/storage/images/2022/05/24/bo-anh-gioi-thieu-langmaster-anh10.webp">
+                <p style="color:#fff; font-size: 18px;line-height: 30px; padding-left: 10px; font-family: arial; text-align: center;">On The Way To Success <br> There Is No Trace Of Lazy Men.</p>
+            </div>
+            <div style="padding-left: 130px; padding-top: 20px;">
+                <img  style="height: 180px; width: 230px;border-radius: 50%; border: 2px solid #a1a1a1;  "src="https://static.ant-learning.com/oss/production/photo/986ead104d544f17a6ca4ab965d427be_7df83cab782e47739bda02d8054516c0.jpg">
+                <br>
+                <br>
+                <p style="text-transform: uppercase; font-size: 28px;color:#fff; font-family:arial;">social networks</p>
+                <div class="media">
+                    <a href="https://www.facebook.com/Tienganhgiaotieplangmaster/">
+                        <img style="width: 50px; height: 50px; padding-top:10px;"src="https://langmaster.edu.vn/images/social-media-icons/facebook_page_url.svg">
+                    </a>
+                    <a href="https://www.youtube.com/user/tienganhlangmaster">
+                        <img style="width: 50px; height: 50px; padding-top:10px;"src="https://langmaster.edu.vn/images/social-media-icons/youtube.svg">
+                    </a>
+                    <a href="https://www.tiktok.com/@tienganh_langmaster">
+                        <img style="width: 50px; height: 50px; padding-top:10px;"src="https://langmaster.edu.vn/images/social-media-icons/tiktok.svg">
+                    </a>
+                </div>
+            </div>
+            <div style="padding-left: 100px;">
+                <p style="text-transform: uppercase; font-size: 28px;color:#fff; font-family:arial;padding-left: 150px;line-height: 50px;"> Liên hệ </p>
+                <div style="display: flex;">
+                    <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                    <p  class="addr"> Cơ sở 1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+                </div>
+                <div style="display: flex; padding-top: 10px;">
+                    <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                    <p  class="addr">0962.195.439</p>
+                </div>
+                <div style="display: flex; padding-top: 10px;">
+                    <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                    <p  class="addr"> Cơ sở 2: 179 Trường Chinh, Thanh Xuân, Hà Nội</p>
+                </div>
+                <div style="display: flex; padding-top: 10px;">
+                    <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                    <p class="addr">0962.152.228</p>
+                </div>
+                <div style="display: flex; padding-top: 10px;">
+                    <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                    <p class="addr">Văn phòng tổng: 30 Ngõ 76/2 Duy Tân, Cầu Giấy, Hà Nội</p>
+                </div>
+                <div style="display: flex; padding-top: 10px;">
+                    <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                    <p  class="addr">0962.154.159</p>
+                </div>
+            </div>
+        </footer>
+     </div>
+</body>
+</html>
