@@ -4,9 +4,373 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/icon-title.png">
+    <link rel="stylesheet" href="./assets/font-icon/fontawesome-free-6.1.2-web/css/all.css">
     <title>Lộ trình học</title>
+    <link rel="stylesheet" href="./assets/css/lotrinh.css">
 </head>
 <body>
+    <header>
+        <img id = "header-img" src="https://langmaster.edu.vn/templates/ocean/images/logo.png"  alt="Trung tâm tiếng Anh Langmaster - Tiếng Anh giao tiếp cho người mất gốc">
+        <div class="h-menu">
+            <ul id="nav">
+                <!-- Loại bỏ khoảng cách giữa các li -->
+                <li><a href="./index.html" >Trang chủ</a></li>
+                <li>
+                    <a href="./pphoc.html">Phương pháp học</a>
+                    <ul class="subnav">
+                        <li><a href="./pphoc.html#realEnglishid">Tiếng anh thực tế - Real Eglish</a></li>
+                        <li><a href="./pphoc.html#listeningid ">Nghe chép - Listening dictation</a></li>
+                        <li><a href="./pphoc.html#tprid">TPR (Total physical response)</a></li>
+                        <li><a href="./pphoc.html#sicid ">SIC (Situation - Interesting - Center)</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html#giangvienid">Đội ngũ đào tạo</a></li>
+                <li>
+                    <a href="./index.html#khoahocid">Khóa học</a>
+                    <ul class="subnav">
+                        <li><a href="./giaoTiep.html">Tiếng anh giao tiếp </a></li>
+                        <li><a href="./ielst.html">Khóa học Ielts </a></li>
+                        <li><a href="./phatAmPX.html">Phát âm phản xạ </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./lotrinh.html">Lộ trình học</a>
+                    <ul class="subnav">
+                        <li><a href="./lotrinh.html#batDauid">Dành cho người mới bắt đầu</a></li>
+                        <li><a href="./lotrinh.html#diLamid">Dành cho người đi làm</a></li>
+                        <li><a href="./lotrinh.html#chuyenSauid">Dành cho người học chuyên sâu</a></li>
+                    </ul>
+                </li>               
+            </ul>
+        </div>
+
+        <div class="seach-btn">
+            <input id="seach-input" type="text" placeholder="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+
+    <div class="intro">
+        <img class="banner-img" src="https://mshoagiaotiep.com/uploads/images/resize/900x900/2021/t11/lo_trinh_hoc_tieng_anh_sieu_chi_tiet_cho_nguoi_moi_bat_dau.png" alt="">
+
+        <div class="list-loTrinh">
+            <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="content-line"></div>
+
+            <div>
+                <p style="font-size: 22px; color: #000; text-transform: uppercase; font-weight: bold;">Bỏ túi lộ trình học tiếng Anh hiệu quả bất ngờ</p>
+            </div>
+            <div class="item-loTrinh">
+                <a href="#batDauid" >Lộ trình cho người mới bắt đầu</a>
+            </div>
+            <div class="item-loTrinh">
+                <a href="#diLamid">Lộ trình cho người đi làm</a>
+            </div>
+            <div class="item-loTrinh">
+                <a href="#chuyenSauid" >Lộ trình học chuyên sâu</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="batDau" id="batDauid">
+        <div class="container">
+            <div class="bd_title">Lộ trình học tiếng anh cho người mới bắt đầu</div>
+            <div class="content">
+                <div class="item item_1">
+                    <div class="item_content">
+                        <div class="info">
+                            <div class="title">Bắt đầu từ các kiến thức cơ bản</div>
+                            <div style="line-height: 24px;">Tìm hiểu về bảng chữ cái, phát âm, các từ và cấu trúc câu đơn giản.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_2">
+                    <div class="item_content">
+                        <div class="info">
+                            <div class="title">Xây dựng vốn từ vựng</div>
+                            <div style="line-height: 24px;">Học và sử dụng các từ vựng thường sử dụng trong cuộc sống hàng ngày, có thể sử dụng các sách học tiếng Anh cơ bản hoặc dùng các ứng dụng học tiếng Anh.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_3">
+                    <div class="item_content">
+                        <div class="info">
+                            <div class="title">Học ngữ pháp tiếng Anh</div>
+                            <div style="line-height: 24px;">Ngữ pháp là nền tảng của việc học tiếng Anh và nó giúp bạn hiểu được cấu trúc câu và các luật ngữ pháp.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_4">
+                    <div class="item_content">
+                        <div class="info">
+                            <div class="title">Luyện nghe và nói</div>
+                            <div style="line-height: 24px;">Hãy luyện nghe và nói tiếng Anh như thường xuyên để tăng cường vốn từ vựng và kỹ năng giao tiếp.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_5">
+                    <div class="item_content">
+                        <div class="info">
+                            <div class="title">Đọc và viết</div>
+                            <div style="line-height: 24px;">Đọc sách, báo hoặc tài liệu tiếng Anh để cải thiện khả năng đọc và viết tiếng Anh của bạn.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_6">
+                    <div class="item_content">
+                        <div class="info">
+                            <div class="title">Học phát âm</div>
+                            <div style="line-height: 24px;">Phát âm đúng giúp bạn tự tin nói tiếng Anh, bạn cần luyện tập phát âm sao cho chuẩn.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="diLam" id="diLamid">
+        <div class="container">
+            <div class="diLam-title">LỘ TRÌNH HỌC TIẾNG ANH CHO NGƯỜI ĐI LÀM</div>
+            <div class="content">
+                <div class="row">
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <img src="./assets/img/loTrinh-img1.png">
+                            </div>
+                            <div class="item-infor">
+                                <div class="title"><span style="color:#000" >01.</span> Xác định mục tiêu học tập của bạn</div>
+                                <div class="desc">Nếu bạn muốn nâng cao kỹ năng giao tiếp, thì bạn có thể tập trung vào học ngữ pháp cơ bản, từ vựng, luyện phát âm, luyện nghe và nói. Nếu bạn muốn cải thiện kỹ năng viết đọc, thì nên tập trung học từ vựng chuyên ngành, luyện viết, đọc và thực hành bài tập để nâng cao kỹ năng đọc hiểu và viết.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <img src="./assets/img/loTrinh-img2.png">
+                            </div>
+                            <div class="item-infor">
+                                <div class="title"><span style="color:#000" >02.</span> Tìm kiếm các tài liệu học tập phù hợp</div>
+                                <div class="desc">Các tài liệu học tập cần có nội dung phù hợp với mục tiêu học tập của bạn, giảng dạy những kỹ năng cần thiết và hiệu quả. Có thể là sách giáo khoa, sách tự học, các video, bài tập trực tuyến, hoặc các khóa học trực tuyến hoặc trực tiếp.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <img src="./assets/img/loTrinh-img3.png">
+                            </div>
+                            <div class="item-infor">
+                                <div class="title"><span style="color:#000" >03.</span> Thời gian học tập</div>
+                                <div class="desc">Bạn có thể dành 30 phút đến 1 giờ mỗi ngày để học tiếng Anh, tùy thuộc vào thời gian rảnh rỗi của bạn.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <img src="./assets/img/loTrinh-img4.png">
+                            </div>
+                            <div class="item-infor">
+                                <div class="title"><span style="color:#000" >04.</span> Học từ vựng và ngữ pháp</div>
+                                <div class="desc">Tốt nhất nên học từ quen thuộc, chia động từ đúng cách để cải thiện kỹ năng nói và viết một cách tự tin hơn.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <img src="./assets/img/loTrinh-img5.png">
+                            </div>
+                            <div class="item-infor">
+                                <div class="title"><span style="color:#000" >05.</span> Luyện nghe và nói</div>
+                                <div class="desc">Luyện nghe và nói có thể giúp bạn nâng cao kỹ năng giao tiếp của mình. Có thể tham gia khóa học, thực hành với người bản ngữ, luyện nghe các đoạn hội thoại hoặc xem phim, các chương trình truyền hình để cải thiện khả năng nghe và hiểu được nhiều hơn từ vựng.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <img src="./assets/img/loTrinh-img6.png">
+                            </div>
+                            <div class="item-infor">
+                                <div class="title"><span style="color:#000" >06.</span> Viết đọc</div>
+                                <div class="desc">Thực hành viết đọc bằng cách đọc các tài liệu chuyên ngành, tìm hiểu về cú pháp văn phong cũng như cách sử dụng dấu câu sẽ giúp bạn cải thiện kĩ năng viết và đọc một cách tự tin hơn.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-left: 300px;">
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <img src="./assets/img/loTrinh-img7.png">
+                            </div>
+                            <div class="item-infor">
+                                <div class="title"><span style="color:#000" >07.</span> Kiểm tra đánh giá</div>
+                                <div class="desc">Kiểm tra đánh giá có thể giúp bạn định kỳ kiểm tra tiến độ học tập của mình. Có thể tham gia các kỳ thi TOEIC, TOEFL, IELTS hoặc các bài kiểm tra trực tuyến để đánh giá trình độ tiếng Anh của mình.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="chuyenSau" id="chuyenSauid">
+        <div class="chuyenSau-title">LỘ TRÌNH HỌC TIẾNG ANH CHUYÊN SÂU</div>
+
+        <div class="content_1"></div>
     
+        <div class="content_2">
+            <div class="info">
+                <h3 class="title">1. Các kỹ năng cơ bản</h3>
+                <p class="decs">
+                    - <b>Từ vựng cơ bản:</b> Học viên cần bắt đầu từ cơ bản như từ vựng trong cuộc sống, cách nói chào hỏi, tình huống giao tiếp cơ bản. 
+                    <br>
+                    - <b>Ngữ pháp và cấu trúc câu:</b> Học viên cần phải hiểu cách sử dụng các bộ từ vựng và cấu trúc ngữ pháp cơ bản đó để sử dụng ngôn ngữ một cách chính xác. 
+                    <br>
+                    - <b>Kỹ năng nghe:</b> Điều này giúp cho việc nghe tiếng Anh một cách chính xác và theo kịp đàm thoại. 
+                </p>
+            </div>
+        </div>
+    
+        <div class="content_3">
+            <div class="info">
+                <h3 class="title">2. Các kỹ năng nâng cao</h3>
+                <p class="decs">
+                    - <b>Kỹ năng đọc:</b> Học viên cần phải đọc tài liệu chuyên ngành tiếng Anh để trau dồi kiến thức của mình. 
+                    <br>
+                    - <b>Kỹ năng viết:</b> Học viên cần phải áp dụng ngữ pháp và bộ từ vựng được học để viết các đoạn văn đầy đủ nội dung và chính xác. 
+                    <br>
+                    - <b>Kỹ năng nói:</b> Đây là kỹ năng cần phải nâng cao bằng cách luyện tập nói tiếng Anh hàng ngày và tham gia các hoạt động giao tiếp bằng tiếng Anh để nói trôi chảy và tự tin hơn. 
+                </p>
+            </div>
+        </div>
+    
+        <div class="content_4"></div>
+    
+        <div class="content_5"></div>
+
+        <div class="content_6">
+            <div class="info">
+                <h3 class="title">3. Các kỹ năng chuyên sâu</h3>
+                <p class="decs">
+                    - <b>Kỹ năng đọc và viết chuyên sâu:</b> Học viên cần phải đọc và viết các tài liệu, bài báo, sách liên quan đến chuyên ngành để hiểu rõ hơn về chủ đề nghiên cứu của mình. 
+                    <br>
+                    - <b>Kỹ năng nghe và nói chuyên sâu:</b> Học viên cần phải luyện tập nghe và nói tiếng Anh chuyên ngành với các chuyên gia, nhà nghiên cứu, hoặc cộng đồng đồng nghiệp để có thể thực hiện các công việc liên quan đến chuyên ngành một cách thành thạo. 
+                </p>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="why-us">
+        <div >
+            <div >
+                <div >
+                    <h3 class="title1">Tại sao nên lựa chọn langmaster</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-item" style="width: 320px">
+                    <div>
+                        <img class="why-us-img" src="./assets/img/icon-1.png" alt="">
+                        <h3 style="font-size: 18px;">Phương pháp đào tạo <br><b>ĐỘC QUYỀN</b></h3>
+                        <p class="cnt">Phương pháp học hiệu quả và độc quyền từ hệ thống Pronunciation Workshop và Effortless English </p>
+                    </div>
+                </div>
+                <div class="row-item" style="width: 320px" >
+                    <div >
+                        <img class="why-us-img" src="./assets/img/icon-2.png" alt="">
+                        <h3 style="font-size: 18px;">Tài liệu học<br> <b>ĐỘC QUYỀN</b></h3>
+                        <p class="cnt">Hệ thống bài học và giáo trình độc quyền được biên soạn bởi chuyên gia Paul Gruber & TS A.J Hoge. Áp dụng thành công trên toàn thế giới</p>
+                    </div>
+                </div>
+                <div class="row-item" style="width: 320px" >
+                    <div>
+                        <img class="why-us-img" src="./assets/img/icon-3.png" alt="">
+                        <h3 style="font-size: 18px;">Giảng viên <br><b>CHUYÊN NGHIỆP</b></h3>
+                        <p class="cnt">Đội ngũ giảng viên giàu kinh nghiệm và sẵn sàng đồng hành cùng học viên trên con đường chinh phục tiếng Anh </p>
+                    </div>
+                </div>
+                <div class="row-item" style="width: 320px">
+                    <div>
+                        <img class="why-us-img" src="./assets/img/icon-4.png" alt="">
+                        <h3 style="font-size: 18px;">Chất lượng dịch vụ<br> <b>TẬN TÂM</b></h3>
+                        <p class="cnt">Dịch vụ chăm sóc và hỗ trợ học viên 24/7, cam kết giúp học viên đột phá khả năng giao tiếp tiếng Anh</p>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+
+    <footer style="padding-top:20px; padding-left: 70px; padding-bottom: 40px; display:flex; background:#181717">
+        <div>
+            <img  style=" width: 350px; height: 250px; padding-top: 30px;" src="https://langmaster.edu.vn/storage/images/2022/05/24/bo-anh-gioi-thieu-langmaster-anh10.webp">
+            <p style="color:#fff; font-size: 18px; line-height: 30px; padding-left: 10px; padding-top: 20px; font-family: arial; text-align: center;">On The Way To Success <br> There Is No Trace Of Lazy Men.</p>
+        </div>
+        <div style="padding-left: 130px; padding-top: 20px;">
+            <img  style="height: 180px; width: 230px;border-radius: 50%; border: 2px solid #a1a1a1;  "src="https://static.ant-learning.com/oss/production/photo/986ead104d544f17a6ca4ab965d427be_7df83cab782e47739bda02d8054516c0.jpg">
+            
+            <br>
+            <br>
+            <p style="text-transform: uppercase; font-size: 28px;color:#fff; font-family:arial;">social networks</p>
+            <div class="media">
+                <a href="https://www.facebook.com/Tienganhgiaotieplangmaster/">
+                    <img style="width: 50px; height: 50px; padding-top:10px;" src="https://langmaster.edu.vn/images/social-media-icons/facebook_page_url.svg">
+                </a>
+                <a href="https://www.youtube.com/user/tienganhlangmaster">
+                    <img style="width: 50px; height: 50px; padding-top:10px;" src="https://langmaster.edu.vn/images/social-media-icons/youtube.svg">
+                </a>
+                <a href="https://www.tiktok.com/@tienganh_langmaster">
+                    <img style="width: 50px; height: 50px; padding-top:10px;" src="https://langmaster.edu.vn/images/social-media-icons/tiktok.svg">
+                </a>
+                
+            </div>
+        </div>
+        <div style="padding-left: 150px;">
+            <p style="text-transform: uppercase; font-size: 28px;color:#fff; font-family:arial;padding-left: 150px;line-height: 50px;"> Liên hệ </p>
+            <div style="display: flex;">
+                <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                <p  class="addr"> Cơ sở 1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                <p  class="addr">0962.195.439</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                <p  class="addr"> Cơ sở 2: 179 Trường Chinh, Thanh Xuân, Hà Nội</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                <p class="addr">0962.152.228</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                <p class="addr">Văn phòng tổng: 30 Ngõ 76/2 Duy Tân, Cầu Giấy, Hà Nội</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                <p  class="addr">0962.154.159</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
