@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href='./assets/img/icon-title.png'/>
+    <title>Phát âm phản xạ</title>
+    <link rel="stylesheet" href="./assets/font-icon/fontawesome-free-6.1.2-web/css/all.css">
+    <style>
+    /*header*/
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    :root {
+        --height-header: 80px;
+    }
+
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+        scroll-behavior: smooth;
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: var(--height-header);
+        background-color: #fff;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #nav {
+        display: inline-block;
+    }
+    #nav > li {
+        display: inline-block;
+    }
+    #nav li {
+        position: relative;
+    }
+    #nav > li > a {
+        color: #000;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #nav li a {
+        display: block;
+        text-decoration: none;
+        line-height: var(--height-header);
+        padding: 0px 20px;
+    }
+    #header-img {
+        height: var(--height-header);
+        width: 250px;
+    }
+    #nav li:hover > a {
+        color: #d72229;
+        background-color: RGBA( 255, 255, 255, 0.5);
+    }
+    #nav li:hover {
+        border-bottom: 4px solid #d72229;
+    }
+
+    #nav li:hover .subnav {
+    display: block;
+    }
+
+    #nav .subnav {
+        display: none;
+        background-color: #fff;
+        min-width: 300px;
+        position: absolute;
+        top: 103%;
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+    }
+
+    #nav, .subnav {
+        list-style-type: none;
+    }
+
+    #nav .subnav li {
+        border-bottom: 1px solid #ccc;
+    }
+
+    #nav .subnav a {
+        color: #000;
+        line-height: 40px;
+        padding: 0 16px;
+    }
+
+    #header-img {
+        height: var(--height-header);
+        width: 250px;
+        object-fit: contain;
+    }
+
+    #nav li:hover > a {
+        color: #d72229;
+        /* background-color: rgba (220,220,220,0.5); */
+    }
+
+    #nav > li:hover {
+        border-bottom: 3px solid #d72229;
+    }
+
+    #nav .subnav li:hover {
+        background-color: rgba(220,220,220,0.5);
+    }
+
+    #nav .subnav li:hover > a {
+        padding: 0 22px;
+    }
+
+    header .seach-btn > .fa-solid {
+        font-size: 24px;
+        line-height: var(--height-header);
+        color: #d72229;
+    }
+    header .seach-btn {
+        float: right;
+    }
+    header .seach-btn:hover {  
+        cursor: pointer;
+    }
+    #seach-input {
+        display: none;
+        font-size: 15px;
+        text-align: center;
+        border-style: none;
+        padding: 0 5px;
+    }
+    /*Danhchoai*/
+    .dca{
+        margin-top: 50px;
+        background-image: linear-gradient(0deg, #dd262c, #d4696d);
+        color: #fff;
+        display:flex;
+        height: 570px;
+    }
+    .dca1{
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+    .dc_pro{
+        border: 1px solid #fff;
+        margin-top: 30px;
+        height:40px;
+        width:250px; 
+        margin-left: -40px;
+        background-color: #fff;
+        color:#000; 
+        line-height: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .ct_dc_pro{
+        padding-top: 20px;
+        font-size: 17px;
+        line-height: 30px;
+        padding-left: 20px;
+    }
+    /*loi ich cua khoa hoc*/
+    .loi_ich{
+        padding-top:40px ;
+        background-color: #fff;
+        margin-bottom: 50px;
+    }
+    .l_ich{
+        padding-top: 30px; 
+        line-height: 35px; 
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .loi_ich_1{
+        padding-left: 50px; 
+        padding-top: 50px;
+        display:flex;
+    }
+    .l_i1{
+        line-height:30px ;
+        text-align: center;
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    .boxb1{
+        margin-left: 20px;
+        border: 2px solid #d9d9d9;
+        width: 320px;
+    }
+    .imgB1{
+        height: 170px;
+        width: 230px;
+        padding-top: 20px; 
+        padding-left: 80px; 
+    }
+    .boxb1:hover{
+        background-image: linear-gradient(180deg, #da2228, #d4696d);
+        /*background-color: #f33339;*/
+        color: #fff;
+    }
+    /*noidung*/
+    .tieude{
+        text-align: center;
+        text-transform: uppercase;
+        color:#1976BD; 
+        font-size: 30px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    .lo_trinh{
+        padding-top: 30px;
+        padding-left: 180px;
+    }
+    .lo_trinh_hoc{
+        margin-left: 50px;
+        padding-left: 30px;
+        padding-top:10px ;
+        line-height: 25px;
+        border-radius: 20px;border: 1px 1px  solid #d9d9d9;
+        background-color:#F6F6F6;
+        width: 950px;
+    }
+    .pph{
+        display:flex;
+        padding-top: 50px;
+    }
+    .ngu_am{
+        display:flex;
+        padding-top: 20px;
+    }
+    .mo_hinh_hoc{
+        display:flex;
+        padding-top: 50px;
+        height:200px;
+        font-weight: bold;
+    }
+    /*giang vien*/
+    .giangvien {
+        height: 780px;
+    /* background-color: f8f9fa; */
+        background-image: url(./img/giangvien-bgr.png);
+        padding-top: 50px;
+    }
+
+    .gv-img {
+        object-fit: cover;
+        width: 85%;
+        margin-top: 18px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 4px -2px rgb(0 0 0 / 40%);
+    }
+
+    .giangvien-item {
+        max-width: 300px;
+        text-align: center;
+        overflow: hidden;
+        /* border: 4px #d72229 solid; */
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px -2px rgb(0 0 0 / 60%);
+        background-color: #e9272e;
+        color:#fff;
+        font-size: 18px;
+    }
+
+    .giangvien-content {
+        margin: 0 80px;
+        padding-top: 50px;
+    }
+
+    .item-row1{   
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .gv-infor > ul {
+        list-style-position: outside;   
+        text-align: justify;
+        padding: 0px 40px 50px;
+    }
+
+    .gv-infor > ul > li {
+        line-height: 1.5;
+    }
+    /*camket*/
+     .camket{
+        background-color:#fff;  
+    }
+    .hbh{
+        margin-left: 30px;
+        width: 250px;
+        height: 30px;
+        background:#D72229;
+        -webkit-transform: skew(150deg);
+        -moz-transform: skew(150deg);
+        -o-transform: skew(150deg);
+        transform: skew(150deg);
+    }
+    .camket1{
+        padding-top: 20px;
+        font-size: 20px;
+        line-height: 25px;
+        padding-left: 10px;
+        font-family: serif;
+    }
+    /*footer*/
+    .media{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 20px;
+      }
+      .house{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #a1a1a1;
+      }
+      .tel{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #a1a1a1;
+      }
+      .addr{
+        color:#fff;
+        font-size: 20px;
+        line-height: 40px; 
+        padding-left: 20px;
+      }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id = "header-img" src="https://langmaster.edu.vn/templates/ocean/images/logo.png"  alt="Trung tâm tiếng Anh Langmaster - Tiếng Anh giao tiếp cho người mất gốc">
+        <div class="h-menu">
+            <ul id="nav">
+                <!-- Loại bỏ khoảng cách giữa các li -->
+                <li><a href="./index.html" >Trang chủ</a></li>
+                <li>
+                    <a href="./pphoc.html">Phương pháp học</a>
+                    <ul class="subnav">
+                        <li><a href="./pphoc.html#realEnglishid">Tiếng anh thực tế - Real Eglish</a></li>
+                        <li><a href="./pphoc.html#listeningid ">Nghe chép - Listening dictation</a></li>
+                        <li><a href="./pphoc.html#tprid">TPR (Total physical response)</a></li>
+                        <li><a href="./pphoc.html#sicid ">SIC (Situation - Interesting - Center)</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html#giangvienid">Đội ngũ đào tạo</a></li>
+                <li>
+                    <a href="./index.html#khoahocid">Khóa học</a>
+                    <ul class="subnav">
+                        <li><a href="./giaoTiep.html">Tiếng anh giao tiếp </a></li>
+                        <li><a href="./ielst.html">Khóa học Ielts </a></li>
+                        <li><a href="./phatAmPX.html">Phát âm phản xạ </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./lotrinh.html">Lộ trình học</a>
+                    <ul class="subnav">
+                        <li><a href="./lotrinh.html#batDauid">Dành cho người mới bắt đầu</a></li>
+                        <li><a href="./lotrinh.html#diLamid">Dành cho người đi làm</a></li>                        
+                        <li><a href="./lotrinh.html#chuyenSauid">Dành cho người học chuyên sâu</a></li>
+                    </ul>
+                </li>               
+            </ul>
+        </div>
+
+        <div class="seach-btn">
+            <input id="seach-input" type="text" placeholder="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+    
+    <img  style="width: 100%; height: 550px;padding-top: 100px;" src="https://langmaster.edu.vn/storage/images/2022/09/14/khoa-offline-banner-01.webp">
+    <div style="font-weight: bold; color:#1976BD; font-size: 35px; text-align: center; padding-top: 70px;">KHÓA HỌC PHÁT ÂM PHẢN XẠ PRONUNCIATION WORKSHOP</div>
+
+    <div class="dca">
+        <div> 
+            <img src=" https://pasal.edu.vn/upload_images/images/2020/02/29/aaa-16.png">
+        </div>
+        <div class="dca1">
+            <p style="font-weight: bold; font-size: 22px;">KHÓA HỌC NÀY DÀNH CHO AI</p>
+            <br>
+            <hr style="color:#fff; width: 100px;">
+            <div class="dc_pro"> BẠN ĐANG GẶP VẤN ĐỀ ? </div>
+            <div class="ct_dc_pro" >
+                <ul>
+                    <li>Bạn bị mất gốc Tiếng Anh (ngữ âm, nghe, giao tiếp)</li>
+                    <li>Lo lắng, ngại ngùng khi phát âm và muốn trau dồi NGỮ ÂM, muốn phát âm chuẩn 43 âm trong bảng IPA.</li>
+                    <li> Chưa biết cách tra từ điển và đọc phiên âm củ từ.</li>
+                    <li> Chưa tự tin, chưa có niềm tin và tình yêu với Tiếng Anh.</li>
+                </ul>
+            </div>
+            <div class="dc_pro"> BẠN MUỐN </div>
+            <div  class="ct_dc_pro" >
+                <ul>
+                    <li >Nói tiếng Anh đúng ngữ điệu và giàu cảm xúc hơn</li>
+                    <li>Phát triển khả năng suy nghĩ và phản xạ với tiếng Anh trong giao tiếp</li>
+                    <li>Ghi nhớ từ vựng và cấu trúc nhanh hơn, áp dụng được trong thực tế</li>
+                    <li>Phát triển toàn diện khả năng Nói tiếng Anh, kể lại câu chuyện, thuyết trình, giao tiếp tự tin các chủ đề thông dụng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loi_ich">
+        <h2 class="tieude">Lợi ích khi học khóa học </h2>
+        <div class="loi_ich_1">
+            <div  class="boxb1" >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/6.png">
+                <p class="l_ich">BÀI HỌC PRONUNCIATION WORKSHOP ĐỘC QUYỀN</p>
+                <p class="l_i1"> Bộ bài học hướng dẫn phát âm độc quyền của Paul Gruber giúp học viên nhanh chóng gia tăng khả năng phát âm</p>
+            </div>
+            <div  class="boxb1" >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/7.png">
+                <p class="l_ich">CHUẨN HOÁ<br>NGỮ ÂM</p>
+                <p class="l_i1">Khoá học hướng dẫn cụ thể các kỹ thụật phát âm, cách đặt khẩu hình miệng, lấy hơi để phát âm chuẩn theo bảng IPA 43 âm</p>
+            </div>
+            <div  class="boxb1"  >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/8.png">
+                <p class="l_ich">CỦNG CỐ, TĂNG TỪ VỰNG VÀ CẤU TRÚC GIAO TIẾP CƠ BẢN</p>
+                <p class="l_i1">Trong khoá học này, vốn từ vựng và cấu trúc câu cơ bản của bạn sẽ được tăng lên thông qua việc thực hành các câu và đoạn hội thoại giao tiếp</p>
+            </div>
+            <div  class="boxb1" >
+                <img class="imgB1" src="https://pasal.edu.vn/upload_images/images/9.png">
+                <p class="l_ich">TĂNG CƯỜNG <br> KỸ NĂNG NGHE</p>
+                <p class="l_i1">Trong khoá học này, bạn sẽ tiếp cận với phương pháp “nghe - chép chính tả”, giúp bạn cải thiện kỹ năng nghe của mình.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="noidung">
+        <p class="tieude"> NỘI DUNG KHÓA HỌC </p>
+        <div class="lo_trinh">
+            <div style="display:flex">
+                <div style="padding-top:30px ;">
+                    <img src=" https://pasal.edu.vn/upload_images/images/2020/02/28/lo-trinh-hoc-1.png">
+                </div>
+                <div class="lo_trinh_hoc">
+                    <h3>Thời lượng khóa học</h3>
+                    <p>16 buổi học trên lớp: 2 buổi/tuần x 2 giờ 15 phút/buổi</p>
+                    <br>
+                    <h3>Nội dung học</h3>
+                    <ul>
+                        <li>Chuẩn hoá ngữ âm tiếng Anh: cách phát âm theo bảng IPA 43 âm & kỹ thuật phát âm nâng cao như trọng âm, nối âm, âm cuối</li>
+                        <li>Luyện nghe các chủ đề thông dụng trong cuộc sống hằng ngày (giới thiệu bản thân, thói quen, sở thích, quê hương, công việc mơ ước,...)</li>
+                        <li>Bổ trợ thêm các kỹ năng khác như cách tra từ và đọc phiên âm tiếng Anh, kỹ năng nghe hiểu, kỹ năng đọc và viết, kỹ năng học & nhớ từ vựng hiệu quả</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pph" >
+                <div style="padding-top: 70px;">
+                    <img src=" https://pasal.edu.vn/upload_images/images/2020/02/28/phuong-phap-hoc.png">
+                </div>
+                <div  class="lo_trinh_hoc" >
+                    <div class="ngu_am">
+                        <div>
+                            <img src="https://pasal.edu.vn/upload_images/images/2020/02/28/pp-ap-dung-1.png">
+                        </div>
+                        <div style="padding-left: 10px;width:400px">
+                            <h3>Ngữ âm</h3>
+                            <p style="font-size: 14px;"> Học cách đặt khẩu hình miệng, lưỡi, bật hơi để tạo ra âm chính xác từ Paul Gruber.</p>
+                        </div>
+                        <div>
+                            <img src="https://pasal.edu.vn/upload_images/images/2020/02/28/pp-ap-dung-4.png">
+                        </div>
+                        <div style="padding-left: 10px;width:400px;">
+                            <h3>Nghe - ngấm</h3>
+                            <p style="font-size: 14px;">Người học sẽ áp dụng phương pháp “nghe - chép chính tả” để tăng cường khả năng nhận biết âm, hiểu nội dung cũng như cải thiện ngữ âm, ngữ điệu khi nói.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ngu_am">
+                        <div>
+                            <img src="https://pasal.edu.vn/upload_images/images/2020/02/28/pp-ap-dung-2.png">
+                        </div>
+                        <div style="padding-left: 10px;width:400px">
+                            <h3>Nói</h3>
+                            <p style="font-size: 14px;">Kỹ thuật Shadowing (Nghe & Bắt chước) để luyện nói tiếng Anh chuẩn xác và giàu cảm xúc.</p>
+                        </div>
+                        <div>
+                            <img src="https://pasal.edu.vn/upload_images/images/2020/02/28/pp-ap-dung-5.png">
+                        </div>
+                        <div style="padding-left: 10px;width:400px;">
+                            <h3>Từ vựng</h3>
+                            <p style="font-size: 14px;">Kỹ thuật TPR (Total Physical Response) giúp tăng khả năng ghi nhớ từ vựng.</p>
+                        </div>
+                    </div>
+
+                    <div class="ngu_am">
+                        <div>
+                            <img src="https://pasal.edu.vn/upload_images/images/2020/02/28/pp-ap-dung-3.png">
+                        </div>
+                        <div style="padding-left: 10px;width:400px">
+                            <h3>Ngữ pháp</h3>
+                            <p style="font-size: 14px;">Củng cố ngữ pháp cơ bản thông qua việc nghe và luyện tập nói các câu, đoạn hội thoại..</p>
+                        </div>
+                        <div>
+                            <img src="https://pasal.edu.vn/upload_images/images/2020/02/28/pp-ap-dung-6.png">
+                        </div>
+                        <div style="padding-left: 10px;width:400px;">
+                            <h3>Viết</h3>
+                            <p style="font-size: 14px;">Thực hành viết được bài giới thiệu ấn tượng và xúc tích về bản thân & gia đình.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mo_hinh_hoc">
+                <div style="padding-top:0px ;">
+                    <img src=" https://pasal.edu.vn/upload_images/images/2020/02/28/mo-hinh-lop-hoc.png">
+                </div>
+                <div class="lo_trinh_hoc" style="line-height: 30px;padding-top: 20px;">
+                    <ul>
+                        <li>Mô hình đào tạo CLASS - HOME - GROUP </li>
+                        <li>Mô hình lớp học: 1 Giảng viên - 1 Trợ giảng - 1 Nhân viên Chăm sóc</li>
+                        <li>Hệ thống bài tập thực hành hàng ngày và các bài test hàng tuần, kiểm soát sự tiến bộ của Học viên.</li>
+                        <li>Sĩ số lớp học: 23 - 28 học viên </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="giangvien">
+        <div class="tieude">
+            <p> 700+ GIẢNG VIÊN TÀI NĂNG, TÂM HUYẾT </p>
+        </div>
+        <div class="giangvien-content" >
+            <div class="item-row1">
+                <div class="giangvien-item">
+                    <img class="gv-img" src="https://langmaster.edu.vn/storage/images/2022/09/08/web-duc-chung-ns202484-06.webp" alt="Vũ Đức Chung">
+                    <div class="gv-infor">
+                        <h3 style="text-align: center; padding: 15px 0px; font-size: 20px;">Ms. Vũ Đức Chung</h3>
+                        <ul>
+                            <li>Chứng chỉ TOEIC 960</li>
+                            <li>4 năm kinh nghiệm giảng dạy tiếng Anh</li>
+                            <li>Diễn giả hội thảo về TOEIC với quy mô hàng trăm người </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="giangvien-item">
+                    <img class="gv-img" src="https://langmaster.edu.vn/storage/images/2022/09/08/web-ngoc-huyen-ns201418-04.webp" alt="Trịnh Ngọc Huyền">
+                    <div class="gv-infor">
+                        <h3 style="text-align: center; padding: 15px 0px; font-size: 20px;">Ms. Trịnh Ngọc Huyền</h3>
+                        <ul>
+                            <li>IELTS 8.5 - VSTEP 9.5</li>
+                            <li>8 năm kinh nghiệm giảng dạy</li>
+                            <li>Diễn giả hội nghị các trường đại học Đông Nam Á</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="giangvien-item">
+                    <img class="gv-img" src="https://langmaster.edu.vn/storage/images/2022/09/08/web-chi-phuong-ns202138-01.webp" alt="Nguyễn Thị Phượng">
+                    <div class="gv-infor">
+                        <h3 style="text-align: center; padding: 15px 0px; font-size: 20px;">Mr. Nguyễn Thị Phượng</h3>
+                        <ul>
+                            <li>Chứng chỉ TOEIC 925 - VSTEP C1 </li>
+                            <li>2 năm kinh nghiệm giảng dạy tiếng Anh</li>
+                            <li>Hơn 5 năm kinh nghiệm trong ngành giáo dục </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="giangvien-item">
+                    <img class="gv-img" src="https://langmaster.edu.vn/storage/images/2022/09/08/web-huyen-trang-ns202444-05.webp" alt="Vũ Thị Huyền Trang">
+                    <div class="gv-infor">
+                        <h3 style="text-align: center; padding: 15px 0px; font-size: 20px;">Ms. Vũ Thị Huyền Trang</h3>
+                        <ul>
+                            <li>Đạt chứng chỉ TOEIC 915</li>
+                            <li>Hơn 3 năm kinh nghiệm giảng dạy tiếng Anh</li>
+                            <li>Đào tạo hơn 1000 học viên</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="camket">
+        <p class="tieude">CAM KẾT 3 BÊN - UY TÍN, AN TÂM, CHẤT LƯỢNG</p>
+        <br>
+        <div style="display:flex;flex-direction: row;justify-content: space-around;padding-top: 30px;">    
+            <div style=" width:300px;">
+                <div>
+                    <img style=" width:270px;height: 250px"src="https://langmaster.edu.vn/images/landing-page/course/online-11/commitment/01.png">
+                    <div class="hbh"> <p style="color:#fff; font-weight: bold; text-align: center;padding-top:5px;"> Cam kết của Langmaster</p> </div>
+                    <div class="camket1"> Xây dựng và thiết kế chương trình đào tạo như đã cam kết, đáp ứng đầy đủ tài liệu phục vụ lớp học </div>
+                </div>
+            </div>
+            <div  style=" width:300px; ">
+                <img style=" width:270px;height: 250px"src="https://langmaster.edu.vn/images/landing-page/course/online-11/commitment/02.png">
+                <div class="hbh"> <p style="color:#fff; font-weight: bold; text-align: center;padding-top:5px;"> Cam kết của Giảng viên</p> </div>
+                <div class="camket1"> Có năng lực giảng dạy hiệu quả theo framework CELTA,thân thiện, nhiệt tính, thấu hiểu và động lực cho học viên </div>
+            </div>
+            <div  style=" width:300px;">
+                <img style=" width:270px;height: 250px"src="https://langmaster.edu.vn/images/landing-page/course/online-11/commitment/03.png">
+                <div class="hbh"> <p style="color:#fff; font-weight: bold; text-align: center;padding-top:5px;"> Cam kết của Học viên</p> </div>
+                <div class="camket1"> Học theo đúng thời lượng Khung tham chiếu Ngôn ngữ Chung Châu Âu đề ra để đạt kết quả đầu ra mong muốn </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <footer style="padding-top:20px; padding-left: 70px;display:flex; background:#181717">
+        <div>
+            <img  style=" width: 350px; height: 250px; padding-top: 30px;" src="https://langmaster.edu.vn/storage/images/2022/05/24/bo-anh-gioi-thieu-langmaster-anh10.webp">
+            <p style="color:#fff; font-size: 18px;line-height: 30px; padding-left: 10px; font-family: arial; text-align: center;">On The Way To Success <br> There Is No Trace Of Lazy Men.</p>
+        </div>
+        <div style="padding-left: 130px; padding-top: 20px;">
+            <img  style="height: 180px; width: 230px;border-radius: 50%; border: 2px solid #a1a1a1;  "src="https://static.ant-learning.com/oss/production/photo/986ead104d544f17a6ca4ab965d427be_7df83cab782e47739bda02d8054516c0.jpg">
+            
+            <br>
+            <br>
+            <p style="text-transform: uppercase; font-size: 28px;color:#fff; font-family:arial;">social networks</p>
+            <div class="media">
+                <a href="https://www.facebook.com/Tienganhgiaotieplangmaster/">
+                    <img style="width: 50px; height: 50px; padding-top:10px;"src="https://langmaster.edu.vn/images/social-media-icons/facebook_page_url.svg">
+                </a>
+                <a href="https://www.youtube.com/user/tienganhlangmaster">
+                    <img style="width: 50px; height: 50px; padding-top:10px;"src="https://langmaster.edu.vn/images/social-media-icons/youtube.svg">
+                </a>
+                <a href="https://www.tiktok.com/@tienganh_langmaster">
+                    <img style="width: 50px; height: 50px; padding-top:10px;"src="https://langmaster.edu.vn/images/social-media-icons/tiktok.svg">
+                </a>
+                
+            </div>
+        </div>
+        <div style="padding-left: 100px;">
+            <p style="text-transform: uppercase; font-size: 28px;color:#fff; font-family:arial;padding-left: 150px;line-height: 50px;"> Liên hệ </p>
+            <div style="display: flex;">
+                <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                <p  class="addr"> Cơ sở 1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                <p  class="addr">0962.195.439</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                <p  class="addr"> Cơ sở 2: 179 Trường Chinh, Thanh Xuân, Hà Nội</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                <p class="addr">0962.152.228</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="house" src="https://symbols.vn/wp-content/uploads/2021/11/Mau-bieu-tuong-ngoi-nha-Png.jpg">
+                <p class="addr">Văn phòng tổng: 30 Ngõ 76/2 Duy Tân, Cầu Giấy, Hà Nội</p>
+            </div>
+            <div style="display: flex; padding-top: 10px;">
+                <img class="tel" src="https://media.istockphoto.com/id/1279896450/vi/vec-to/logo-bi%E1%BB%83u-t%C6%B0%E1%BB%A3ng-%C4%91i%E1%BB%87n-tho%E1%BA%A1i.jpg?s=1024x1024&w=is&k=20&c=lCdPaBDax32ZENQ2iLmcVYGvCl6v2p5LSIckZuzDwB8=">
+                <p  class="addr">0962.154.159</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
